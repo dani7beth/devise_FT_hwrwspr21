@@ -1,12 +1,16 @@
-import { Nav, Navbar, NavbarBrand, NavLink } from "bootstrap-react";
+import { Nav, Navbar } from "react-bootstrap";
 
 const NavBar = () => {
   return (
-    <Navbar collapseOnSelect expand="lg" variant="dark">
-      <NavbarBrand>Devise-App</NavbarBrand>
+    <Navbar collapseOnSelect expand="lg">
+      <Navbar.Brand>Devise-App</Navbar.Brand>
       <Nav>
-        <NavLink href="/">Home</NavLink>
-        <NavLink href="/about">About</NavLink>
+        <Nav.Link href="/">Home</Nav.Link>
+        <Nav.Link href="/about">About</Nav.Link>
+      </Nav>
+      <Nav className="ml-auto">
+        <Nav.Link href="/login">Login</Nav.Link>
+        {/* <Nav.link href="/register">Register</Nav.link> */}
       </Nav>
     </Navbar>
   );
